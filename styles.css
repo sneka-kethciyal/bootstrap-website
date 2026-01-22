@@ -1,0 +1,430 @@
+/* LOGO FONT */
+.navbar-brand h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 3px;
+  color: black;
+}
+
+/* DESKTOP NAVBAR */
+.navbar-nav .nav-link {
+  color: black !important;
+  font-weight: 500;
+  padding: 8px 15px;
+}
+
+/* REMOVE underline in desktop */
+.navbar-nav .nav-link::after {
+  display: none;
+}
+
+/* ================= MOBILE SETTINGS ================= */
+
+@media (max-width: 991px) {
+
+  /* Toggle Left */
+  .navbar-toggler {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    z-index: 1050;
+  }
+
+  /* Center Logo */
+  .navbar-brand {
+    margin: auto;
+    text-align: center;
+  }
+
+  /* Slide Menu */
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    height: 100vh;
+    width: 260px;
+    background: #ffffff;
+    padding-top: 80px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1040;
+  }
+
+  /* Show Menu */
+  .navbar-collapse.show {
+    left: 0;
+  }
+
+  /* Vertical Links */
+  .navbar-nav {
+    flex-direction: column;
+    padding-left: 20px;
+  }
+
+  /* Mobile Links Style */
+  .navbar-nav .nav-link {
+    padding: 12px 0;
+    position: relative;
+  }
+
+  /* Hover effect */
+  .navbar-nav .nav-link:hover::after {
+    width: 45px;
+    transition: 0.3s;
+  }
+
+}
+
+
+
+/* HERO IMAGE SECTION */
+
+.hero-section {
+  height: 100vh;
+  background-image: url('images/1.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* DARK OVERLAY FOR TEXT VISIBILITY */
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* HERO TEXT */
+
+.hero-overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* BUTTON STYLE */
+
+.hero-btn {
+  padding: 12px 30px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: black;
+  color: white;
+}
+
+.content-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.main-text {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+  margin: auto;
+}
+
+.image-section {
+  height: 100vh;
+  background-image: url('images/2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+}
+
+/* BRAND LOGOS */
+.brand-logo {
+  width: 100%;
+  max-width: 80px;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.brand-logo:hover {
+  filter: blur(2px);
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.dance-button {
+  padding: 10px 25px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dance-button:hover {
+  animation: dance 0.8s ease-in-out;
+}
+
+@keyframes dance {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+
+  20% {
+    transform: rotate(-10deg) translateX(-5px);
+  }
+
+  40% {
+    transform: rotate(10deg) translateX(5px);
+  }
+
+  60% {
+    transform: rotate(-10deg) translateX(-5px);
+  }
+
+  80% {
+    transform: rotate(10deg) translateX(5px);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+
+/* Optional: right image max width for balance */
+.brand-section .col-md-6 img {
+  max-width: 100%;
+  text-align: right;
+}
+
+/* TEXT CAROUSEL MAIN */
+.text-carousel-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.carousel-bg {
+  position: absolute;
+  width: 98%;
+  height: 95%;
+  background-image: url("images/nail");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+
+/* DARK OVERLAY */
+.carousel-bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* CONTENT BOX */
+.carousel-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+  color: black;
+}
+
+/* SMALL TITLE */
+.carousel-subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* BIG TITLE */
+.carousel-title {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* TEXT HOLDER */
+.carousel-wrapper {
+  position: relative;
+  height: 120px;
+}
+
+/* CAROUSEL TEXT */
+.carousel-text {
+  position: absolute;
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  font-style: italic;
+}
+
+/* ACTIVE */
+.carousel-text.active {
+  opacity: 1;
+}
+
+/* CLIENT NAME */
+.client-name {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.instagram-btn {
+  display: inline-block;
+  padding: 14px 18px;
+  background-color: #007bff;
+  /* Blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.instagram-btn:hover {
+  color: white;
+}
+
+.instagram-btn i {
+  font-size: 18px;
+}
+
+.footer-section {
+  background: #f8f8f8;
+  padding: 70px 0;
+}
+
+/* COLUMN SPACING */
+.footer-col {
+  margin-bottom: 30px;
+}
+
+/* BRAND */
+.footer-brand {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.footer-subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+/* SOCIAL TEXT */
+.footer-social-title {
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* ICON ROW */
+.social-icons-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* BLACK ICON STYLE */
+.social-icon-black {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icon-black:hover {
+  color: #555;
+  transform: scale(1.1);
+}
+
+/* SEPARATOR */
+.icon-separator {
+  font-size: 18px;
+  color: black;
+}
+
+/* INFO */
+.footer-heading {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.map-container {
+  width: 100%;
+  height: 230px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* COPYRIGHT FOOTER */
+.copyright-footer {
+  background-color: white;
+  /* dark footer */
+  color: gray;
+  font-size: 14px;
+}
+
+.copyright-footer a.home-link {
+  color: gray;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.copyright-footer a.home-link:hover {
+  color: black;
+  /* changes to blue on hover */
+  text-decoration: none;
+}
