@@ -104,9 +104,9 @@
 
 .hero-overlay h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   letter-spacing: 3px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .hero-overlay p {
@@ -148,13 +148,27 @@
   margin: auto;
 }
 
+/* RESPONSIVE IMAGE SECTION */
+
 .image-section {
-  height: 100vh;
+  width: 100%;
+  min-height: 80vh;   /* Desktop height */
   background-image: url('images/2.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* MOBILE OPTIMIZATION */
+
+@media (max-width: 768px) {
+
+  .image-section {
+    min-height: 50vh;     /* Smaller height for mobile */
+    background-position: top center;
+  }
+
 }
 
 /* BRAND LOGOS */
@@ -427,4 +441,5 @@
   color: black;
   /* changes to blue on hover */
   text-decoration: none;
+
 }
